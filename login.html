@@ -3,35 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorpresa</title>
+  <title>Mi Sorpresa Especial 💖</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background: linear-gradient(to bottom, #ff7eb3, #ff758c);
-      color: white;
+      min-height: 100vh;
+      background-color: #f7d9e4;
     }
-    .container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      width: 90%;
-      max-width: 400px;
+    h1 {
+      font-size: 2rem;
+      color: #ff4d6d;
     }
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      margin: 15px 0;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
+    p {
+      color: #444;
+      margin: 20px;
     }
     button {
       background: #ff4d6d;
@@ -41,45 +33,22 @@
       border-radius: 25px;
       font-size: 18px;
       cursor: pointer;
+      margin: 10px;
       transition: background 0.3s ease;
     }
     button:hover {
       background: #ff1e47;
     }
-    @media (min-width: 768px) {
-      .container {
-        width: 50%;
-        max-width: 600px;
-      }
-      button {
-        font-size: 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Un regalo para tí 💖</h1>
-    <p>Por favor, ingresa tu número de celular para continuar:</p>
-    <input type="text" id="phone" placeholder="Tu número aquí">
-    <br>
-    <button onclick="validate()">Continuar</button>
-  </div>
 
-  <script>
 
-    const registeredNumber = "0967935599";
+  <h1>Bienvenida a tu sorpresa 💕</h1>
+  <p>Espero que disfrutes este recorrido especial que he preparado para ti 🥰.</p>
 
-    function validate() {
-      const phone = document.getElementById("phone").value;
-      if (phone === registeredNumber) {
-        alert("¡Acceso concedido! Bienvenida Nuria esto lo preparé para tí💖");
-        // Redirige al "Home"
-        window.location.href = "index.html"; // Página principal
-      } else {
-        alert("Número incorrecto. Por favor, intenta nuevamente.");
-      }
-    }
-  </script>
+  <button onclick="location.href='pagina1.html'">Primera sorpresa</button>
+  <button onclick="location.href='pagina2.html'">Segunda sorpresa</button>
+  <button onclick="location.href='final.html'">Ir a la gran pregunta</button>
 </body>
 </html>
