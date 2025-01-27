@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primera Sorpresa 💖</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fdeff3;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #ff4d6d;
+    }
+    p {
+      color: #444;
+      margin: 20px;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #ff1e47;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Mensajes que se actualizan automáticamente -->
+  <h1 id="titulo">Primera sorpresa 🌟</h1>
+  <p id="mensaje">Quiero recordarte lo especial que eres para mí. Cada día contigo es un regalo ❤️.</p>
+
+  <button onclick="location.href='index.html'">Volver al inicio</button>
+  <button onclick="location.href='pagina2.html'">Ir a la siguiente</button>
+
+  <script>
+    // Mensajes que se mostrarán
+    const mensajes = [
+      { titulo: "Primera sorpresa 🌟", mensaje: "Quiero recordarte lo especial que eres para mí. Cada día contigo es un regalo ❤️." },
+      { titulo: "Eres increíble ✨", mensaje: "Tu sonrisa ilumina mi mundo y siempre logras alegrar mi día 😊." },
+      { titulo: "Siempre contigo 💕", mensaje: "Quiero seguir compartiendo momentos inolvidables contigo, porque eres única 💖." },
+      { titulo: "Mi mayor regalo 🎁", mensaje: "De todas las cosas que tengo, tú eres lo más valioso para mí ❤️." }
+    ];
+
+    // Referencias al título y mensaje en el DOM
+    const tituloElement = document.getElementById("titulo");
+    const mensajeElement = document.getElementById("mensaje");
+
+    // Índice inicial
+    let indice = 0;
+
+    // Función para cambiar los mensajes automáticamente
+    function cambiarMensajes() {
+      indice = (indice + 1) % mensajes.length; // Avanza al siguiente mensaje y reinicia si llega al final
+      tituloElement.textContent = mensajes[indice].titulo;
+      mensajeElement.textContent = mensajes[indice].mensaje;
+    }
+
+    // Cambiar mensajes cada 5 segundos
+    setInterval(cambiarMensajes, 5000);
+  </script>
+</body>
+</html>

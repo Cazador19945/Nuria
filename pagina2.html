@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un poema para ti 💕</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      color: #4a4a4a;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #ff4d6d;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 10px 20px;
+      max-width: 600px;
+    }
+    .poema {
+      font-style: italic;
+      font-size: 1.5rem;
+      margin: 30px 20px;
+      color: #333;
+      
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #ff1e47;
+    }
+  </style>
+</head>
+<body>
+  <!-- Música romántica de fondo -->
+  <audio autoplay loop>
+    <source src="audi1.mp3" type="audio/mp3">
+    Tu navegador no soporta el audio.
+  </audio>
+
+  <!-- Título y poema -->
+  <h1>Un poema para ti 💕</h1>
+  <p class="poema">
+    “Cuando miro tus ojos, encuentro mi hogar,<br>
+    en cada sonrisa tuya, un rincón de paz.<br>
+    En este mundo vasto, tan incierto y fugaz,<br>
+    tú eres mi certeza, mi refugio, mi verdad.”<br>
+  </p>
+
+  <p class="poema">
+    “Quiero ser el abrigo que te envuelve en la tormenta,<br>
+    la estrella que te guíe si te sientes perdida.<br>
+    Porque contigo aprendí que el amor no miente,<br>
+    que eres mi principio y mi razón de vida.”<br>
+  </p>
+
+  <button onclick="location.href='index.html'">Volver al inicio</button>
+  <button onclick="location.href='final.html'">Continuar 💌</button>
+</body>
+</html>
